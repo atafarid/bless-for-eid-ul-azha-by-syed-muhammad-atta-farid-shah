@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sacred Eid-ul-Azha | SYED MUHAMMAD ATTA FARID SHAH</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Amiri&display=swap" rel="stylesheet">
+    <style>
+        /* === Luxury Base Styles === */
+        :root {
+            --sacred-gold: #C5A47E;
+            --divine-emerald: #0A3D2B;
+            --midnight-velvet: #0A0A0A;
+            --celestial-white: #F5F5F5;
+        }
+
+        body {
+            background: var(--midnight-velvet);
+            font-family: 'Playfair Display', serif;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* === Divine Particles === */
+        .noor-particles {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* === Sacred Container === */
+        .sanctum-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* === Heavenly Header === */
+        .divine-header {
+            text-align: center;
+            margin-bottom: 6rem;
+            position: relative;
+        }
+
+        .sacred-greeting {
+            font-size: 4.5rem;
+            background: linear-gradient(45deg, 
+                var(--sacred-gold), 
+                #FFF3C7 40%, 
+                var(--sacred-gold));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: 1.5px;
+            text-shadow: 0 0 50px rgba(197, 164, 126, 0.3);
+            margin-bottom: 2rem;
+        }
+
+        /* === Quranic Revelation Section === */
+        .quranic-section {
+            background: rgba(10, 61, 43, 0.2);
+            backdrop-filter: blur(15px);
+            border: 2px solid var(--sacred-gold);
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 4rem 0;
+        }
+
+        .ayat-container {
+            font-family: 'Amiri', serif;
+            text-align: center;
+        }
+
+        .ayat-arabic {
+            font-size: 3rem;
+            color: var(--sacred-gold);
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .ayat-translation {
+            font-size: 1.2rem;
+            color: var(--celestial-white);
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* === Sacred Interaction Section === */
+        .blessing-section {
+            background: linear-gradient(45deg, 
+                rgba(10, 61, 43, 0.3), 
+                rgba(197, 164, 126, 0.1));
+            padding: 4rem 2rem;
+            border-radius: 20px;
+            margin: 4rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .sacred-input {
+            padding: 1.5rem 3rem;
+            font-size: 1.2rem;
+            background: rgba(245, 245, 245, 0.05);
+            border: 2px solid var(--sacred-gold);
+            border-radius: 50px;
+            color: var(--celestial-white);
+            width: 100%;
+            max-width: 500px;
+            display: block;
+            margin: 2rem auto;
+            transition: all 0.3s ease;
+        }
+
+        .sacred-input:focus {
+            box-shadow: 0 0 40px var(--sacred-gold);
+            background: rgba(245, 245, 245, 0.1);
+        }
+
+        .submit-blessing {
+            background: linear-gradient(45deg, 
+                var(--divine-emerald), 
+                var(--sacred-gold));
+            padding: 1.5rem 4rem;
+            border: none;
+            border-radius: 50px;
+            color: var(--celestial-white);
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: block;
+            margin: 2rem auto;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        /* === Holy Visual Section === */
+        .kaaba-sanctum {
+            width: 100%;
+            max-width: 800px;
+            margin: 4rem auto;
+            border-radius: 20px;
+            border: 3px solid var(--sacred-gold);
+            box-shadow: 0 0 60px rgba(197, 164, 126, 0.2);
+            transform: translateY(50px);
+            opacity: 0;
+            transition: all 1s ease;
+        }
+
+        /* === Prophetic Message Section === */
+        .attfarid-message {
+            text-align: center;
+            margin: 6rem 0;
+            padding: 3rem;
+            background: rgba(10, 61, 43, 0.3);
+            border-radius: 20px;
+            border-top: 3px solid var(--sacred-gold);
+        }
+
+        .eid-mubarak {
+            font-size: 3rem;
+            color: var(--sacred-gold);
+            margin-bottom: 2rem;
+        }
+
+        .personal-signature {
+            font-size: 1.2rem;
+            color: var(--celestial-white);
+            letter-spacing: 1px;
+            margin-top: 2rem;
+            font-style: italic;
+        }
+
+        /* === Animations === */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .reveal {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="noor-particles" id="noorParticles"></div>
+    
+    <div class="sanctum-container">
+        <!-- Divine Header -->
+        <header class="divine-header">
+            <h1 class="sacred-greeting">Assalam-o-Alaikum</h1>
+        </header>
+
+        <!-- Quranic Section -->
+        <section class="quranic-section">
+            <div class="ayat-container">
+                <div class="ayat-arabic">
+                    ﴾لَن يَنَالَ ٱللَّهَ لُحُومُهَا وَلَا دِمَآؤُهَا وَلَٰكِن يَنَالُهُ ٱلتَّقْوَىٰ مِنكُمْ﴿
+                </div>
+                <div class="ayat-translation">
+                    "Never does their meat reach Allah, nor their blood, but what reaches Him is your piety."<br>
+                    (Al-Qur'an 22:37 - Surah Al-Hajj)
+                </div>
+            </div>
+        </section>
+
+        <!-- Blessing Interaction -->
+        <section class="blessing-section">
+            <input type="text" class="sacred-input" placeholder="Enter Your Blessed Name" id="blessedName">
+            <button class="submit-blessing" onclick="revealDivineMessage()">Receive Sacred Blessings</button>
+        </section>
+
+        <!-- Holy Visual -->
+        <img src="kaba.PNG" class="kaaba-sanctum" id="kaabaImage" alt="Sacred Sites">
+
+        <!-- Attfarid Message -->
+        <section class="attfarid-message" id="divineMessage">
+            <div class="eid-mubarak" id="eidText"></div>
+            <div class="personal-signature">
+                "May your sacrifices ascend to the Divine and your home resonate with eternal blessings"<br>
+                - Syed Muhammad Atta Farid Shah
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Create Noor Particles
+        function createNoor() {
+            const container = document.getElementById('noorParticles');
+            for(let i = 0; i < 100; i++) {
+                const particle = document.createElement('div');
+                particle.style.cssText = `
+                    position: absolute;
+                    width: ${Math.random()*4+2}px;
+                    height: ${Math.random()*4+2}px;
+                    background: rgba(197, 164, 126, ${Math.random()*0.3});
+                    border-radius: 50%;
+                    animation: float ${Math.random()*6+3}s infinite;
+                    left: ${Math.random()*100}%;
+                    top: ${Math.random()*100}%;
+                `;
+                container.appendChild(particle);
+            }
+        }
+        createNoor();
+
+        // Initial Animation
+        setTimeout(() => {
+            document.getElementById('kaabaImage').classList.add('reveal');
+        }, 500);
+
+        function revealDivineMessage() {
+            const blessedName = document.getElementById('blessedName').value.trim();
+            if (!blessedName) return;
+
+            document.getElementById('eidText').innerHTML = `
+                Eid-ul-Azha Mubarak<br>
+                <span style="font-size: 0.7em; display: block; margin-top: 1rem">
+                    ${blessedName}
+                </span>
+            `;
+
+            // Golden Spark Animation
+            for(let i = 0; i < 30; i++) {
+                const spark = document.createElement('div');
+                spark.style.cssText = `
+                    position: fixed;
+                    width: 10px;
+                    height: 10px;
+                    background: radial-gradient(circle, 
+                        var(--sacred-gold) 20%, 
+                        transparent 80%);
+                    animation: divineGlow ${Math.random()*1+0.5}s ease-out;
+                    left: ${Math.random()*100}%;
+                    top: ${Math.random()*100}%;
+                `;
+                document.body.appendChild(spark);
+                setTimeout(() => spark.remove(), 1000);
+            }
+        }
+
+        // Add custom animations
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes divineGlow {
+                0% { transform: scale(0); opacity: 1; }
+                100% { transform: scale(3); opacity: 0; }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
